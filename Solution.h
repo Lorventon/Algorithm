@@ -7,9 +7,10 @@
 
 class Solution
 {
-private:
 public:
     Solution() = default;
+    //1.
+    // Receive any container and return the same it without repeater elements.
 };
 
 #endif //TEST_2_SOLUTION_H
