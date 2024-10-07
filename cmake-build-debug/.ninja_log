@@ -1,0 +1,9 @@
+# ninja log v6
+6	1150	7500276899060237	CMakeFiles/test_2.dir/main.cpp.obj	b56e24f0402a8316
+1153	1365	7500276910532263	test_2.exe	21b34d5dd210c84c
+7	1072	7500282126281879	CMakeFiles/test_2.dir/main.cpp.obj	b56e24f0402a8316
+6	82	7500282808734780	CMakeFiles/test_2.dir/Solution.cpp.obj	afc302a46e39deba
+83	255	7500282809504117	test_2.exe	356a537befc2bc8e
+27	1128	7500283375165591	CMakeFiles/test_2.dir/main.cpp.obj	b56e24f0402a8316
+27	92	7500283486605538	CMakeFiles/test_2.dir/Solution.cpp.obj	afc302a46e39deba
+92	204	7500283487266329	test_2.exe	356a537befc2bc8e
