@@ -1,7 +1,7 @@
 #include <iostream>
-
+#include "LeetCode/LeetCodeTasks.h"
 int main() {
 
-    //Execute methods from classes. Accordingly, they will be to solve the problems.
+    std::cout << "Hello, World!" << std::endl;
     return 0;
 }
