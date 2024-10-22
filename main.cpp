@@ -1,7 +1,11 @@
+/*#include "Yandex/5.0.h"*/
+#include <map>
+#include <vector>
+#include <algorithm>
 #include <iostream>
-#include "LeetCode/LeetCodeTasks.h"
-int main() {
 
-    std::cout << "Hello, World!" << std::endl;
+int main()
+{
+
     return 0;
 }
