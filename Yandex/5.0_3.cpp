@@ -92,3 +92,86 @@ void C()
         std::cout << n - max_cnt;
     }
 }
+
+int D()
+{
+    std::unordered_map<int, unsigned > my_nums;
+    unsigned n,k ;std::cin >> n >> k;
+
+    for (int i = 0; i < n; ++i) {
+        int num;
+        std::cin >> num;
+        if (my_nums.find(num) == my_nums.end())
+        {
+            my_nums[num] = i;
+        }
+        else
+        {
+            if (i - my_nums[num] <= k)
+            {
+                std::cout << "YES";
+                return 0;
+            }
+            else
+            {
+                my_nums[num] = i;
+            }
+        }
+    }
+
+    std::cout << "NO";
+    return 0;
+}
+
+namespace TaskE {
+
+    void add_to_set(std::set <int> &set)
+    {
+        unsigned n;
+        std::cin >> n;
+        for (int i = 0; i < n; ++i) {
+            int num;
+            std::cin >> num;
+            set.insert(num);
+        }
+    }
+
+    std::set <int> intersaction(std::set <int> set1, std::set <int> set2)
+    {
+        std::set <int> new_set;
+
+        for (const auto &el : set1)
+        {
+            if (set2.find(el) != set2.end())
+            {
+                new_set.insert(el);
+            }
+        }
+        return new_set;
+    }
+
+    void print_set(std::set <int> set)
+    {
+        for (const auto &el:set)
+            std::cout << el << " ";
+    }
+
+    void E() {
+
+
+        std::set<int> m_nums, m_nums2, m_nums3;
+
+        add_to_set(m_nums);
+        add_to_set(m_nums2);
+        add_to_set(m_nums3);
+
+        std::set<int> inter_12 = intersaction(m_nums, m_nums2);
+        std::set<int> inter_13 = intersaction(m_nums, m_nums3);
+        std::set<int> inter_23 = intersaction(m_nums2, m_nums3);
+
+        inter_12.insert(inter_13.begin(), inter_13.end());
+        inter_12.insert(inter_23.begin(), inter_23.end());
+
+        print_set(inter_12);
+    }
+}
