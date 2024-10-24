@@ -82,6 +82,7 @@ void C()
         }
     }
 
+
     if (max_cnt == 0)
     {
         if (m_numbers.size() == 1) {std::cout << 0;}
@@ -173,5 +174,51 @@ namespace TaskE {
         inter_12.insert(inter_23.begin(), inter_23.end());
 
         print_set(inter_12);
+    }
+}
+
+namespace TaskF{
+    void print_collection(const std::unordered_set<std::string>& a)
+    {
+        for (const auto &el: a)
+            std::cout << el << std::endl;
+    }
+
+    void print_collection(const std::vector<std::string>& a)
+    {
+        for (const auto &el: a)
+            std::cout << el << " ";
+    }
+
+    void F() {
+        std::unordered_set<std::string> dictionary;
+        std::vector<std::string> words;
+
+        {
+            std::string my_str;
+            std::getline(std::cin, my_str);
+            std::istringstream iss(my_str);
+
+            std::string str;
+
+            while (iss >> str)
+                dictionary.insert(str);
+
+            std::getline(std::cin, my_str);
+            std::istringstream iss2(my_str);
+
+            while (iss2 >> str) {
+                words.emplace_back(str);
+            }
+        }
+
+        for (int i = 0; i < words.size(); ++i) {
+            for (int j = 1; j < words[i].length(); ++j) {
+                std::string substr = (words[i].substr(0, j));
+                if (dictionary.find(substr) != dictionary.end()) {words[i] = substr; break;}
+            }
+        }
+
+        print_collection(words);
     }
 }

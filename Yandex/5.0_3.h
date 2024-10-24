@@ -3,9 +3,12 @@
 
 #include <string>
 #include <map>
+#include <vector>
 #include <set>
 #include <unordered_map>
+#include <unordered_set>
 #include <algorithm>
+#include <sstream>
 #include <iostream>
 
 void A();
@@ -22,6 +25,14 @@ namespace TaskE
     void print_set(std::set <int> set);
 
     void E();
+}
+
+namespace TaskF{
+    void print_collection(const std::unordered_set<std::string>& a);
+
+    void print_collection(const std::vector<std::string>& a);
+
+    void F();
 }
 
 #endif //TEST_2_5_0_3_H
