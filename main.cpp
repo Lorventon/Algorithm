@@ -1,4 +1,4 @@
-#include "Yandex/5.0_3.h"
+#include "Yandex/6.0_1.h"
 
 int main() {
 

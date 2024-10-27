@@ -11,28 +11,32 @@
 #include <sstream>
 #include <iostream>
 
-void A();
-void B();
-void C();
-int D();
+namespace FiftAlgoritms {
+    void A();
 
-namespace TaskE
-{
-    void add_to_set(std::set <int> &set);
+    void B();
 
-    std::set <int> intersaction(std::set <int> set1, std::set <int> set2);
+    void C();
 
-    void print_set(std::set <int> set);
+    int D();
 
-    void E();
-}
+    namespace TaskE {
+        void add_to_set(std::set<int> &set);
 
-namespace TaskF{
-    void print_collection(const std::unordered_set<std::string>& a);
+        std::set<int> intersaction(std::set<int> set1, std::set<int> set2);
 
-    void print_collection(const std::vector<std::string>& a);
+        void print_set(std::set<int> set);
 
-    void F();
+        void E();
+    }
+
+    namespace TaskF {
+        void print_collection(const std::unordered_set<std::string> &a);
+
+        void print_collection(const std::vector<std::string> &a);
+
+        void F();
+    }
 }
 
 #endif //TEST_2_5_0_3_H

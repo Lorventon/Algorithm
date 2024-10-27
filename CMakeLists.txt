@@ -7,4 +7,6 @@ add_executable(test_2
         main.cpp
         Yandex/5.0_3.cpp
         Yandex/5.0_3.h
-        Yandex/5.0_3.cpp)
+        Yandex/5.0_3.cpp
+        Yandex/6.0_1.h
+        Yandex/6.0_1.cpp)
