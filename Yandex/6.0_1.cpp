@@ -65,4 +65,83 @@ namespace SixthAlgoritms {
 
         std :: cout << side;
     }
+    void B()
+    {
+        int A, B, C, D;
+        std::cin >> A >> B >> C >> D;
+        std::pair<int, int> combination, temp;
+        unsigned min_sum = pow(10,9)*4, cur_sum;
+
+        // Получаем синий  + красный комплект (Гарантированно)
+        // То есть Brute Force получение синего комплекта и также красного. (Нету рандомно выпавшей вещи)
+        if (cur_sum = B + 1 + D + 1, cur_sum < min_sum && (A * B * C * D != 0)) {
+            min_sum = cur_sum;
+            combination.first = B + 1;
+            combination.second = D + 1;
+        }
+        if (cur_sum = A + 1 + C + 1, cur_sum < min_sum && (A * B * C * D != 0)) {
+            min_sum = cur_sum;
+            combination.first = A + 1;
+            combination.second = C + 1;
+        }
+
+        //Если чего-то просто ноль (Один из ответа будет 1, а второй - это
+        if (cur_sum = C + 2, A == 0 and cur_sum < min_sum)
+        {
+            min_sum = cur_sum;
+            combination.first = 1; combination.second = C + 1;
+        }
+        if (cur_sum = D + 2, B == 0 and cur_sum < min_sum)
+        {
+            min_sum = cur_sum;
+            combination.first = 1; combination.second = D + 1;
+        }
+        if (cur_sum = A + 2, C == 0 and cur_sum < min_sum)
+        {
+            min_sum = cur_sum;
+            combination.first = A + 1; combination.second = 1;
+        }
+        if (cur_sum = B + 2, D == 0 and cur_sum < min_sum)
+        {
+            min_sum = cur_sum;
+            combination.first = B+1; combination.second = 1;
+        }
+        if ( (A == 0 and (C == 0 || D == 0)) || (B == 0 and (C == 0 || D == 0)))
+        {
+            min_sum = 2;
+            combination.first = 1; combination.second = 1;
+        }
+
+        //Проверка, если футболок одинаково или носков одинаково (синих и красных)
+        if (A == B && (A * B * C * D != 0))
+        {
+            if (cur_sum = std::max(C,D) + 2, A > C and A > D and cur_sum < min_sum && (A * B * C * D != 0))
+            {
+                min_sum = cur_sum;
+                combination.first = 1; combination.second = std::max(C,D) + 1;
+            }
+        }
+        if (C == D && (A * B * C * D != 0))
+        {
+            if (cur_sum = std::max(A,B) + 2, C > A and C > B and cur_sum < min_sum && (A * B * C * D != 0))
+            {
+                min_sum = cur_sum;
+                combination.first = std::max(A,B) + 1; combination.second = 1;
+            }
+        }
+
+        //Остальные случаи
+        if (cur_sum = std::max(A,B) + 2, cur_sum < min_sum && (A * B * C * D != 0))
+        {
+            min_sum = cur_sum;
+            combination.first = std::max(A,B) + 1; combination.second = 1;
+        }
+        if (cur_sum = std::max(C,D) + 2, cur_sum < min_sum && (A * B * C * D != 0))
+        {
+            min_sum = cur_sum;
+            combination.first = 1; combination.second = std::max(C,D) + 1;
+        }
+
+        std::cout << combination.first << " " << combination.second;
+    }
 }

@@ -7,6 +7,7 @@
 
 namespace SixthAlgoritms {
     void A();
+    void B();
 }
 
 
