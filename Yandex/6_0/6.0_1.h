@@ -5,7 +5,7 @@
 #include <cmath>
 #include <string>
 
-namespace SixthAlgoritms {
+namespace SixthAlgoritms_1 {
     void A();
     void B();
 }

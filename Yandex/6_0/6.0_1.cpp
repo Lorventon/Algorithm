@@ -1,6 +1,6 @@
 #include "6.0_1.h"
 
-namespace SixthAlgoritms {
+namespace SixthAlgoritms_1 {
     void A() {
 
         double min_dist = pow(2,50), cur_dist;
