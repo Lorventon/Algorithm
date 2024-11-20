@@ -2,7 +2,7 @@
 #include "5.0_3.h"
 
 //3 contest
-namespace FiftAlgoritms {
+namespace FiftAlgoritms_3 {
     void A() {
         unsigned cnt_numbers;
         unsigned all_good_songs = 0;

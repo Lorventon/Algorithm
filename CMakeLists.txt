@@ -11,4 +11,6 @@ add_executable(test_2
         Yandex/6_0/6.0_1.h
         Yandex/6_0/6.0_1.cpp
         Yandex/6_0/6.0_2.h
-        Yandex/6_0/6.0_2.cpp)
+        Yandex/6_0/6.0_2.cpp
+        Yandex/6_0/6.0_3.h
+        Yandex/6_0/6.0_3.cpp)

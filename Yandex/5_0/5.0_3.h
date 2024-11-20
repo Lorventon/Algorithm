@@ -11,7 +11,7 @@
 #include <sstream>
 #include <iostream>
 
-namespace FiftAlgoritms {
+namespace FiftAlgoritms_3 {
     void A();
 
     void B();

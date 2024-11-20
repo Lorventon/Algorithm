@@ -8,6 +8,7 @@
 namespace SixthAlgoritms_1 {
     void A();
     void B();
+    // C didn't do, D and E - making tests, check the .txt files.
 }
 
 
